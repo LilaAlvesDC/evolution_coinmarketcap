@@ -9,7 +9,7 @@ content = result.text
 
 soup = BeautifulSoup(content, 'lxml')
 
-Links = soup.findAll("a", class_="historical-link cmc-link")
+Links = soup.find("a", class_="historical-link cmc-link").text
 
 print(Links)
 
