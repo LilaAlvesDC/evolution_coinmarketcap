@@ -42,11 +42,6 @@ for cripto in website:
 
     print(MarketCap)
    
-# for cripto in soup.find_all('tr'):
-#    print(cripto.get('cmc-table-row))
-
-# print('\n'.join(map(str, Row)))
-
 # with open('CoinMarketCap.txt', 'w') as file: 
 #    file.write(Crypto) 
 
