@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np 
 from time import sleep
 from random import randint
+from bs4 import NavigableString
 
 website = ['https://coinmarketcap.com/es/historical/20130428/','https://coinmarketcap.com/es/historical/20130505/']
 
@@ -33,14 +34,13 @@ for cripto in website:
     # find_all names
     names = soup.find_all('a', {'class': tag_name})
     for names in names:
+        Name = [ ]
         Name.append(names.text)
         
     # find_all MarketCap
     marketscaps = soup.find_all('td', {'class': tag_marketcap})
-    for marketcap in marketscaps:
-        MarketCap.append(marketscaps)
-
-    print(MarketCap)
+    marketscaps_amount = [x.find('div').text for x in marketscaps]
+    print(marketscaps_amount)
    
 # with open('CoinMarketCap.txt', 'w') as file: 
 #    file.write(Crypto) 
