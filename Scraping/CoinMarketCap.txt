@@ -1,1 +1,1 @@
-1 Bitcoin $1,488,566,971.96
+['Bitcoin', 'Litecoin', 'Peercoin', 'Namecoin', 'Terracoin', 'Devcoin', 'Novacoin']
